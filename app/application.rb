@@ -21,8 +21,9 @@ class Application
       end
        elsif req.path.match(/add/)
       item = req.params["i"]
-      if items.include
-      resp.write handle_search(search_term)
+      if items.include?(item)
+        @@cart << item 
+      end
       
     else
       resp.write "Path Not Found"
