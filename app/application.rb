@@ -21,7 +21,7 @@ class Application
       end
        elsif req.path.match(/add/)
       item = req.params["i"]
-      if 
+      if items.include
       resp.write handle_search(search_term)
       
     else
