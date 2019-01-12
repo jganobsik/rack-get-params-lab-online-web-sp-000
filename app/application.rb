@@ -27,6 +27,8 @@ class Application
       item = req.params["i"]
       if @@items.include?(item)
         @@cart << item 
+      else 
+        resp.write
       end
       
     else
