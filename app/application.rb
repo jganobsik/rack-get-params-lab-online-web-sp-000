@@ -21,7 +21,7 @@ class Application
       end
        elsif req.path.match(/add/)
       item = req.params["i"]
-      if items.include?(item)
+      if @@items.include?(item)
         @@cart << item 
       end
       
